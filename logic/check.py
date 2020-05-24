@@ -28,13 +28,12 @@ def check_diagonals(matrix):
         return True
 
 
-def check_for_winner(matrix, player):
+def check_for_winner(matrix):
     for i in range(0, len(matrix)):
-        if player:
-            if check_rows(i, matrix):
-                return True
-            if check_cols(i, matrix):
-                return True
-            if check_diagonals(matrix):
-                return True
+        if check_rows(i, matrix):
+            return True
+        if check_cols(i, matrix):
+            return True
+        if check_diagonals(matrix):
+            return True
     return False

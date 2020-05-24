@@ -17,7 +17,7 @@ def print_grid(matrix):
 def main():
     counter = 0
     player_turn = PLAYER_1_FIGURE
-    while counter < (ROWS * COLS) and not check_for_winner(CELLS, player_turn):
+    while counter < (ROWS * COLS) and not check_for_winner(CELLS):
         x, y = [int(x) for x in input(f"{FONT}Player-{player_turn} turn\nEnter the coordinates: ").split()]
         if x > 3 or y > 3:
             print("You picked the wrong house fool")
